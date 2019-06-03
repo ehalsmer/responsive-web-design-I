@@ -109,7 +109,9 @@ h1, h2, h3, h4, h5 {
 /* Below is new CSS for services.html */
 body {
 	margin: 0px 50px;
-	max-width: 876px;
+    max-width: 876px;
+    display: flex;
+    flex-direction: column;
 }
 
 .nav-and-logo {
@@ -201,6 +203,16 @@ footer {
 }
 
 @media (max-width: 800px){
+    .nav-and-logo {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .nav-links {
+        display: flex;
+        justify-content: space-between;
+        margin: 40px 0px 0px 0px;
+        width: 100%;
+    }
     body {
         display: flex;
         flex-direction: column;
@@ -209,19 +221,39 @@ footer {
         display: none;
     }
     .index-header {
-        text-align: center;
+        /* text-align: center; */
         padding: 0px 0px;
         margin: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
     }
     .top-content {
         display: flex;
         justify-content: space-between;
     }
     .top-content div {
-        padding: 5px;
+        padding: 10px;
+    }
+    .bottom-content {
+        display: flex;
+        justify-content: space-between;
+    }
+    .bottom-content div {
+        padding: 10px;
     }
 }
 
 @media (max-width: 500px){
-
+    /* .nav-and-logo {
+        display: flex;
+        flex-direction: column-reverse;
+    } */
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: auto;
+        width: 100%;
+    }
 }
